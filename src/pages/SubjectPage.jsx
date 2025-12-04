@@ -82,10 +82,63 @@ const SubjectPage = () => {
         <div>
           {activeModule ? (
             <div>
-              <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <span style={{ color: 'var(--primary)' }}>{activeModule.name.split(':')[0]}</span>
                 <span style={{ height: '1px', flex: 1, background: 'rgba(255, 255, 255, 0.1)' }}></span>
               </h2>
+              
+              {/* Module Description */}
+              {activeModule.description && (
+                <p style={{ fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '2rem', color: 'var(--text-muted)' }}>
+                  {activeModule.description}
+                </p>
+              )}
+
+              {/* Roadmap */}
+              {activeModule.roadmap && (
+                <div style={{ 
+                  background: 'rgba(99, 102, 241, 0.1)', 
+                  border: '1px solid rgba(99, 102, 241, 0.2)',
+                  borderRadius: '1rem',
+                  padding: '1.5rem',
+                  marginBottom: '3rem'
+                }}>
+                  <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <span>🗺️</span> Lộ trình & Nội dung học
+                  </h3>
+                  <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '0.5rem' }}>
+                    {Array.isArray(activeModule.roadmap) ? activeModule.roadmap.map((item, index) => (
+                      <li key={index} style={{ display: 'flex', gap: '0.75rem', alignItems: 'start', lineHeight: 1.5 }}>
+                        <span style={{ 
+                          background: 'var(--primary)', 
+                          color: 'white', 
+                          width: '1.5rem', 
+                          height: '1.5rem', 
+                          borderRadius: '50%', 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          justifyContent: 'center',
+                          fontSize: '0.8rem',
+                          flexShrink: 0,
+                          marginTop: '2px'
+                        }}>{index + 1}</span>
+                        <span style={{ color: 'var(--text-muted)' }}>{item}</span>
+                      </li>
+                    )) : (
+                      <li style={{ color: 'var(--text-muted)' }}>{activeModule.roadmap}</li>
+                    )}
+                  </ul>
+                </div>
+              )}
+
+              {/* Final Products Header */}
+              <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 600 }}>🎬 Sản phẩm cuối khóa</h3>
+                <span style={{ fontSize: '0.9rem', padding: '0.2rem 0.6rem', background: 'var(--surface)', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.1)', color: 'var(--text-muted)' }}>
+                  {activeModule.videos.length} video
+                </span>
+              </div>
+
               <VideoGrid videos={activeModule.videos} onVideoClick={setSelectedVideo} />
             </div>
           ) : (
