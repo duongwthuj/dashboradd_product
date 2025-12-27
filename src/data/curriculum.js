@@ -19,7 +19,7 @@ const videoAssets = {
         { file: 'SNLTW_HP_1.mp4', title: 'Trang Profile' },
         { file: 'SNLTW_HP1_1.mp4', title: 'Landing Page' },
         { file: 'SNLTW_HP1_2.mp4', title: 'Portfolio Online' },
-        { file: 'SNLTW_HP1_-_Ma_Morse.mp4', title: 'Ứng dụng Mã Morse' },
+        { file: 'SNLTW_HP1_Ma_Morse.mp4', title: 'Ứng dụng Mã Morse' },
         { file: 'SNLTW_HP1.mp4', title: 'Web đầu tiên' },
         { file: 'SNLTW_HP2.mp4', title: 'Website HP2' },
         { file: 'SNLW_HP1_Doan_so.mp4', title: 'Game Đoán số' },
