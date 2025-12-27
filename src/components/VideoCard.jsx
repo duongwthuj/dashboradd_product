@@ -6,7 +6,7 @@ const VideoCard = ({ video, onClick }) => {
 
   // Generate thumbnail from video file
   useEffect(() => {
-    if (video.videoUrl && video.videoUrl.startsWith('/src/assets/')) {
+    if (video.videoUrl && (video.videoUrl.startsWith('/src/assets/') || video.videoUrl.startsWith('/videos/'))) {
       const videoElement = document.createElement('video');
       videoElement.crossOrigin = 'anonymous';
       videoElement.muted = true;
