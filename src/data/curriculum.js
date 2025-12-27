@@ -1,9 +1,9 @@
 // Video assets từ thư mục src/assets
 const videoAssets = {
     'BLG': [
-        { file: 'BLG - HP4 - Danh banh.mp4', title: 'Đánh bóng' },
-        { file: 'BLG - HP4 - Giai cuu thanh pho.mp4', title: 'Giải cứu thành phố' },
-        { file: 'BLG-HP1-CodeKitten (1).mp4', title: 'CodeKitten 1' },
+        { file: 'BLG_HP4_Danh_banh.mp4', title: 'Đánh bóng' },
+        { file: 'BLG_HP4_Giai_cuu_thanh_pho.mp4', title: 'Giải cứu thành phố' },
+        { file: 'BLG-HP1-CodeKitten_1.mp4', title: 'CodeKitten 1' },
         { file: 'BLG-HP1-CodeKitten.mp4', title: 'CodeKitten' },
         { file: 'BLG-HP1-CodeKitten_3.mp4', title: 'CodeKitten 3' },
         { file: 'BLG-HP1-Codekitten_2.mp4', title: 'CodeKitten 2' },
@@ -15,16 +15,16 @@ const videoAssets = {
         { file: 'TE-C-PA-711-2020BLG-0093.mp4', title: 'Game Sáng tạo' }
     ],
     'SNLW': [
-        { file: 'SNLTW_HP 1 (1).mp4', title: 'Website Cá nhân' },
-        { file: 'SNLTW_HP 1.mp4', title: 'Trang Profile' },
-        { file: 'SNLTW_HP1 (1).mp4', title: 'Landing Page' },
-        { file: 'SNLTW_HP1 (2).mp4', title: 'Portfolio Online' },
-        { file: 'SNLTW_HP1 - Ma Morse.mp4', title: 'Ứng dụng Mã Morse' },
+        { file: 'SNLTW_HP_1_1.mp4', title: 'Website Cá nhân' },
+        { file: 'SNLTW_HP_1.mp4', title: 'Trang Profile' },
+        { file: 'SNLTW_HP1_1.mp4', title: 'Landing Page' },
+        { file: 'SNLTW_HP1_2.mp4', title: 'Portfolio Online' },
+        { file: 'SNLTW_HP1_-_Ma_Morse.mp4', title: 'Ứng dụng Mã Morse' },
         { file: 'SNLTW_HP1.mp4', title: 'Web đầu tiên' },
         { file: 'SNLTW_HP2.mp4', title: 'Website HP2' },
-        { file: 'SNLW - HP1 - Doan so.mp4', title: 'Game Đoán số' },
-        { file: 'SNLW - HP1 - May quay hoa qua.mp4', title: 'Máy quay hoa quả' },
-        { file: 'SNLW - HP1 - Menu mua tra sua.mp4', title: 'Menu Trà sữa' },
+        { file: 'SNLW_HP1_Doan_so.mp4', title: 'Game Đoán số' },
+        { file: 'SNLW_HP1_May_quay_hoa_qua.mp4', title: 'Máy quay hoa quả' },
+        { file: 'SNLW_HP1_Menu_mua_tra_sua.mp4', title: 'Menu Trà sữa' },
         { file: 'TE-C-PA-1218-2020SNLTW-0097.mp4', title: 'Dự án Website' },
         { file: 'TE-C-PA-1218-2020SNLTW-0103.mp4', title: 'Web App Hoàn chỉnh' }
     ]
