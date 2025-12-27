@@ -52,7 +52,7 @@ const generateModules = (subjectId, subjectName, count = 12) => {
                 title: asset ? asset.title : `Sản phẩm ${j + 1}`,
                 studentName: studentNames[(i + j) % studentNames.length],
                 thumbnailUrl: null,
-                videoUrl: asset ? `/videos/${asset.file}` : 'https://www.w3schools.com/html/mov_bbb.mp4',
+                videoUrl: asset ? `/videos/${asset.file}?v=2` : 'https://www.w3schools.com/html/mov_bbb.mp4',
                 description: `Bài thuyết trình sản phẩm cuối khóa của học phần ${i + 1} - ${subjectName}.`
             };
         })
