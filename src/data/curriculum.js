@@ -84,7 +84,7 @@ export const curriculum = [
                         title: 'Game Đoán số',
                         studentName: 'Nguyễn Minh Anh',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/SNLW - HP1 - Doan so.mp4',
+                        videoUrl: '/videos/SNLW_HP1_Doan_so.mp4?v=2',
                         description: 'Ứng dụng game đoán số được xây dựng bằng HTML, CSS và JavaScript.'
                     },
                     {
@@ -92,7 +92,7 @@ export const curriculum = [
                         title: 'Máy quay Hoa quả',
                         studentName: 'Trần Hải Đăng',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/SNLW - HP1 - May quay hoa qua.mp4',
+                        videoUrl: '/videos/SNLW_HP1_May_quay_hoa_qua.mp4?v=2',
                         description: 'Ứng dụng máy quay hoa quả thú vị với animation CSS.'
                     },
                     {
@@ -100,7 +100,7 @@ export const curriculum = [
                         title: 'Menu Trà sữa',
                         studentName: 'Lê Thùy Linh',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/SNLW - HP1 - Menu mua tra sua.mp4',
+                        videoUrl: '/videos/SNLW_HP1_Menu_mua_tra_sua.mp4?v=2',
                         description: 'Website menu trà sữa với thiết kế đẹp mắt.'
                     },
                     {
@@ -108,7 +108,7 @@ export const curriculum = [
                         title: 'Ứng dụng Mã Morse',
                         studentName: 'Phạm Quốc Bảo',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/SNLTW_HP1 - Ma Morse.mp4',
+                        videoUrl: '/videos/SNLTW_HP1_Ma_Morse.mp4?v=2',
                         description: 'Ứng dụng chuyển đổi mã Morse sáng tạo.'
                     },
                     {
@@ -116,7 +116,7 @@ export const curriculum = [
                         title: 'Trang Profile cá nhân',
                         studentName: 'Hoàng Mai Chi',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/SNLTW_HP 1.mp4',
+                        videoUrl: '/videos/SNLTW_HP_1.mp4?v=2',
                         description: 'Trang profile cá nhân với thiết kế hiện đại.'
                     }
                 ]
@@ -138,7 +138,7 @@ export const curriculum = [
                         title: 'Website với CSS đẹp',
                         studentName: 'Vũ Đức Minh',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/SNLTW_HP2.mp4',
+                        videoUrl: '/videos/SNLTW_HP2.mp4?v=2',
                         description: 'Website hoàn chỉnh với CSS styling chuyên nghiệp.'
                     },
                     {
@@ -146,7 +146,7 @@ export const curriculum = [
                         title: 'Landing Page',
                         studentName: 'Đặng Thu Hà',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/SNLTW_HP1 (1).mp4',
+                        videoUrl: '/videos/SNLTW_HP1_1.mp4?v=2',
                         description: 'Landing page với thiết kế hiện đại.'
                     },
                     {
@@ -154,7 +154,7 @@ export const curriculum = [
                         title: 'Portfolio Online',
                         studentName: 'Bùi Hoàng Nam',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/SNLTW_HP1 (2).mp4',
+                        videoUrl: '/videos/SNLTW_HP1_2.mp4?v=2',
                         description: 'Portfolio cá nhân ấn tượng.'
                     },
                     {
@@ -162,7 +162,7 @@ export const curriculum = [
                         title: 'Web App Hoàn chỉnh',
                         studentName: 'Ngô Thế Anh',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/TE-C-PA-1218-2020SNLTW-0097.mp4',
+                        videoUrl: '/videos/TE-C-PA-1218-2020SNLTW-0097.mp4?v=2',
                         description: 'Dự án web app hoàn chỉnh.'
                     }
                 ]
@@ -214,7 +214,7 @@ export const curriculum = [
                         title: 'CodeKitten - Game đầu tiên',
                         studentName: 'Nguyễn Minh Anh',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG-HP1-CodeKitten.mp4',
+                        videoUrl: '/videos/BLG-HP1-CodeKitten.mp4?v=2',
                         description: 'Game đầu tiên được tạo bằng CodeKitten.'
                     },
                     {
@@ -222,7 +222,7 @@ export const curriculum = [
                         title: 'CodeKitten - Phiên bản 2',
                         studentName: 'Trần Hải Đăng',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG-HP1-Codekitten_2.mp4',
+                        videoUrl: '/videos/BLG-HP1-Codekitten_2.mp4?v=2',
                         description: 'Game CodeKitten mở rộng với nhiều tính năng.'
                     },
                     {
@@ -230,7 +230,7 @@ export const curriculum = [
                         title: 'CodeKitten - Game sáng tạo',
                         studentName: 'Lê Thùy Linh',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG-HP1-CodeKitten_3.mp4',
+                        videoUrl: '/videos/BLG-HP1-CodeKitten_3.mp4?v=2',
                         description: 'Game sáng tạo với hiệu ứng đặc biệt.'
                     },
                     {
@@ -238,7 +238,7 @@ export const curriculum = [
                         title: 'CodeKitten - Hoàn thiện',
                         studentName: 'Phạm Quốc Bảo',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG-HP1-CodeKitten (1).mp4',
+                        videoUrl: '/videos/BLG-HP1-CodeKitten_1.mp4?v=2',
                         description: 'Dự án CodeKitten hoàn thiện.'
                     }
                 ]
@@ -260,7 +260,7 @@ export const curriculum = [
                         title: 'Đánh bóng',
                         studentName: 'Hoàng Mai Chi',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG - HP4 - Danh banh.mp4',
+                        videoUrl: '/videos/BLG_HP4_Danh_banh.mp4?v=2',
                         description: 'Game đánh bóng vui nhộn.'
                     },
                     {
@@ -268,7 +268,7 @@ export const curriculum = [
                         title: 'Giải cứu thành phố',
                         studentName: 'Vũ Đức Minh',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG - HP4 - Giai cuu thanh pho.mp4',
+                        videoUrl: '/videos/BLG_HP4_Giai_cuu_thanh_pho.mp4?v=2',
                         description: 'Game phiêu lưu giải cứu thành phố.'
                     },
                     {
@@ -276,7 +276,7 @@ export const curriculum = [
                         title: 'Tynker Game',
                         studentName: 'Đặng Thu Hà',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG-HP4-Tynker.mp4',
+                        videoUrl: '/videos/BLG-HP4-Tynker.mp4?v=2',
                         description: 'Game Tynker sáng tạo.'
                     },
                     {
@@ -284,7 +284,7 @@ export const curriculum = [
                         title: 'Tynker Adventure',
                         studentName: 'Bùi Hoàng Nam',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG-HP4-Tynker_2.mp4',
+                        videoUrl: '/videos/BLG-HP4-Tynker_2.mp4?v=2',
                         description: 'Game phiêu lưu Tynker.'
                     },
                     {
@@ -292,7 +292,7 @@ export const curriculum = [
                         title: 'Tynker Puzzle',
                         studentName: 'Ngô Thế Anh',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG-HP4-Tynker_3.mp4',
+                        videoUrl: '/videos/BLG-HP4-Tynker_3.mp4?v=2',
                         description: 'Game giải đố Tynker.'
                     },
                     {
@@ -300,7 +300,7 @@ export const curriculum = [
                         title: 'Tynker Ultimate',
                         studentName: 'Đỗ Khánh Linh',
                         thumbnailUrl: null,
-                        videoUrl: '/src/assets/BLG-HP4-Tynker_4.mp4',
+                        videoUrl: '/videos/BLG-HP4-Tynker_4.mp4?v=2',
                         description: 'Game Tynker hoàn chỉnh.'
                     }
                 ]
