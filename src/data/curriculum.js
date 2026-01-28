@@ -29,7 +29,6 @@ const videoAssets = {
         { file: 'SNLTW_HP_1_1.mp4', title: 'Website Cá nhân' },
         { file: 'SNLTW_HP1_1.mp4', title: 'Landing Page' },
         { file: 'SNLTW_HP1_2.mp4', title: 'Portfolio Online' },
-        { file: 'SNLTW_HP1_san_pham.mp4', title: 'Sản phẩm Web 1' },
         { file: 'SNLTW_HP1_san_pham_2.mp4', title: 'Sản phẩm Web 2' },
         { file: 'SNLTW_HP1_san_pham_3.mp4', title: 'Sản phẩm Web 3' }
     ]
@@ -179,14 +178,6 @@ export const curriculum = [
                         thumbnailUrl: null,
                         videoUrl: '/videos/SNLTW_HP1_2.mp4?v=2',
                         description: 'Portfolio online trưng bày sản phẩm.'
-                    },
-                    {
-                        id: 'SNLW-mod-1-vid-9',
-                        title: 'Sản phẩm Web 1',
-                        studentName: 'Ngô Thế Anh',
-                        thumbnailUrl: null,
-                        videoUrl: '/videos/SNLTW_HP1_san_pham.mp4?v=2',
-                        description: 'Dự án web sáng tạo đầu tiên.'
                     },
                     {
                         id: 'SNLW-mod-1-vid-10',
