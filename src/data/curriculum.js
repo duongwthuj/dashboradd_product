@@ -216,22 +216,6 @@ export const curriculum = [
         ]
     },
     {
-        id: 'SNLG',
-        name: 'Siêu nhân lập trình game',
-        description: 'Khơi dậy đam mê sáng tạo game với các công cụ lập trình hiện đại.',
-        // Ảnh thân thiện - trẻ em chơi game
-        thumbnail: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=600',
-        modules: generateComingSoonModules('SNLG', 'Game')
-    },
-    {
-        id: 'SNLT',
-        name: 'Siêu nhân lập trình',
-        description: 'Nền tảng tư duy lập trình vững chắc cho tương lai công nghệ.',
-        // Ảnh thân thiện - trẻ em với máy tính
-        thumbnail: 'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?auto=format&fit=crop&q=80&w=600',
-        modules: generateComingSoonModules('SNLT', 'Code')
-    },
-    {
         id: 'BLG',
         name: 'Bé làm game',
         description: 'Bước khởi đầu thú vị cho các bé làm quen với tư duy logic qua việc làm game.',
@@ -331,6 +315,22 @@ export const curriculum = [
                 ]
             }
         ]
+    },
+    {
+        id: 'SNLG',
+        name: 'Siêu nhân lập trình game',
+        description: 'Khơi dậy đam mê sáng tạo game với các công cụ lập trình hiện đại.',
+        // Ảnh thân thiện - trẻ em chơi game
+        thumbnail: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=600',
+        modules: generateComingSoonModules('SNLG', 'Game')
+    },
+    {
+        id: 'SNLT',
+        name: 'Siêu nhân lập trình',
+        description: 'Nền tảng tư duy lập trình vững chắc cho tương lai công nghệ.',
+        // Ảnh thân thiện - trẻ em với máy tính
+        thumbnail: 'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?auto=format&fit=crop&q=80&w=600',
+        modules: generateComingSoonModules('SNLT', 'Code')
     },
     {
         id: 'DSMM',

@@ -1,7 +1,19 @@
+import { useState } from 'react';
 import { curriculum } from '../data/curriculum';
 import SubjectCard from '../components/SubjectCard';
+import SearchBar from '../components/SearchBar';
+import BackToTop from '../components/BackToTop';
 
 const HomePage = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  
+  // Filter courses based on search
+  const filteredCurriculum = curriculum.filter(subject => 
+    subject.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    subject.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    subject.id.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div style={{ 
       padding: '2rem', 
@@ -98,6 +110,19 @@ const HomePage = () => {
         ))}
       </div>
 
+      {/* Search Bar */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '3rem'
+      }}>
+        <SearchBar 
+          placeholder="Tìm kiếm khóa học, môn học..."
+          onSearch={setSearchQuery}
+          onClear={() => setSearchQuery('')}
+        />
+      </div>
+
       {/* Section Header */}
       <div style={{
         display: 'flex',
@@ -117,7 +142,7 @@ const HomePage = () => {
             fontWeight: 700, 
             color: 'var(--text)'
           }}>
-            Các khóa học
+            {searchQuery ? 'Kết quả tìm kiếm' : 'Các khóa học'}
           </h2>
         </div>
         <span style={{
@@ -129,20 +154,65 @@ const HomePage = () => {
           border: '1px solid var(--border)',
           fontWeight: 500
         }}>
-          {curriculum.length} khóa học
+          {filteredCurriculum.length} khóa học
         </span>
       </div>
 
       {/* Subjects Grid */}
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-        gap: '1.5rem' 
-      }}>
-        {curriculum.map(subject => (
-          <SubjectCard key={subject.id} subject={subject} />
-        ))}
-      </div>
+      {filteredCurriculum.length > 0 ? (
+        <div style={{ 
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '1.5rem'
+        }}>
+          {filteredCurriculum.map(subject => (
+            <SubjectCard key={subject.id} subject={subject} />
+          ))}
+        </div>
+      ) : (
+        // Empty State
+        <div style={{
+          padding: '4rem 2rem',
+          textAlign: 'center',
+          background: 'var(--surface)',
+          borderRadius: 'var(--radius-2xl)',
+          border: '2px dashed var(--border)',
+          maxWidth: '500px',
+          margin: '0 auto'
+        }}>
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" strokeWidth="1.5" style={{ margin: '0 auto 1.5rem', opacity: 0.5 }}>
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.5rem' }}>
+            Không tìm thấy kết quả
+          </h3>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
+            Không có khóa học nào phù hợp với "{searchQuery}"
+          </p>
+          <button
+            onClick={() => setSearchQuery('')}
+            style={{
+              background: 'var(--gradient-primary)',
+              color: 'white',
+              border: 'none',
+              padding: '0.75rem 1.5rem',
+              borderRadius: 'var(--radius-full)',
+              fontWeight: 600,
+              cursor: 'pointer',
+              fontSize: '0.95rem',
+              transition: 'all var(--transition-bounce)'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            Xóa bộ lọc
+          </button>
+        </div>
+      )}
+
+      {/* Back to Top Button */}
+      <BackToTop />
 
       {/* Footer CTA */}
       <div style={{
