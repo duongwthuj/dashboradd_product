@@ -6,6 +6,12 @@ const VideoCard = ({ video, onClick }) => {
 
   // Generate thumbnail from video file
   useEffect(() => {
+    // Skip thumbnail generation for Coming Soon videos
+    if (video.comingSoon || !video.videoUrl) {
+      setIsLoading(false);
+      return;
+    }
+    
     if (video.videoUrl && (video.videoUrl.startsWith('/src/assets/') || video.videoUrl.startsWith('/videos/'))) {
       const videoElement = document.createElement('video');
       videoElement.crossOrigin = 'anonymous';
@@ -40,35 +46,78 @@ const VideoCard = ({ video, onClick }) => {
     } else {
       setIsLoading(false);
     }
-  }, [video.videoUrl, video.title]);
+  }, [video.videoUrl, video.title, video.comingSoon]);
 
   const displayThumbnail = thumbnail || video.thumbnailUrl;
 
   return (
     <div 
-      onClick={() => onClick(video)}
+      onClick={() => !video.comingSoon && onClick(video)}
       style={{
         background: 'var(--surface)',
         borderRadius: 'var(--radius-lg)',
         overflow: 'hidden',
-        cursor: 'pointer',
+        cursor: video.comingSoon ? 'not-allowed' : 'pointer',
         transition: 'all var(--transition-bounce)',
         border: '1px solid var(--border)',
-        boxShadow: 'var(--shadow-sm)'
+        boxShadow: 'var(--shadow-sm)',
+        opacity: video.comingSoon ? 0.85 : 1
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.transform = 'translateY(-5px) scale(1.02)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-lg)';
-        e.currentTarget.style.borderColor = 'var(--primary-light)';
+        if (!video.comingSoon) {
+          e.currentTarget.style.transform = 'translateY(-5px) scale(1.02)';
+          e.currentTarget.style.boxShadow = 'var(--shadow-lg)';
+          e.currentTarget.style.borderColor = 'var(--primary-light)';
+        }
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.transform = 'translateY(0) scale(1)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
-        e.currentTarget.style.borderColor = 'var(--border)';
+        if (!video.comingSoon) {
+          e.currentTarget.style.transform = 'translateY(0) scale(1)';
+          e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
+          e.currentTarget.style.borderColor = 'var(--border)';
+        }
       }}
     >
       <div style={{ position: 'relative', paddingTop: '56.25%' }}>
-        {isLoading ? (
+        {video.comingSoon ? (
+          // Coming Soon placeholder
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            gap: '1rem'
+          }}>
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.9">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ 
+                fontSize: '1.1rem', 
+                fontWeight: 700,
+                marginBottom: '0.25rem',
+                letterSpacing: '0.5px'
+              }}>
+                COMING SOON
+              </div>
+              <div style={{ 
+                fontSize: '0.75rem', 
+                opacity: 0.9,
+                fontWeight: 500
+              }}>
+                Video sẽ được cập nhật
+              </div>
+            </div>
+          </div>
+        ) : isLoading ? (
           <div style={{
             position: 'absolute',
             top: 0,
